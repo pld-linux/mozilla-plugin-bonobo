@@ -1,4 +1,3 @@
-# TODO: rename spec to mozilla-plugin-bonobo.spec
 %define		_origname mozilla-bonobo
 
 Summary:	Browser Bonobo plugin
