@@ -1,13 +1,14 @@
+%define		_origname mozilla-bonobo
+
 Summary:	Browser Bonobo plugin
 Summary(pl):	Wtyczka Bonobo dla przegl±darek
-Name:		mozilla-bonobo
-Version:	0.3.0
-Release:	2
+Name:		mozilla-plugin-bonobo
+Version:	0.4.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
-Source0:	http://savannah.nongnu.org/download/moz-bonobo/%{name}-%{version}.tar.gz
-# Source0-md5:  cf607f4c20a26ef849dd54565de17532
-Patch0:		%{name}-mozilla-config.patch
+Source0:	http://savannah.nongnu.org/download/moz-bonobo/%{_origname}-%{version}.tar.gz
+# Source0-md5:	177a78eedd9efb53fb72bfbf4e2ef1a7
 URL:		http://www.nongnu.org/moz-bonobo/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -36,18 +37,13 @@ W skrócie: wtyczka ta sprawia, ¿e przegl±darka u¿ywa kontrolek Bonobo
 do wy¶wietlania wspieranych typów plików w oknie przegl±darki.
 
 %prep
-%setup -q
-%patch0 -p1
+%setup -q -n %{_origname}-%{version}
 
 %build
 rm -f missing
-%{__gettextize}
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
 %configure \
-	--with-plugin-install-dir=%{_libdir}/mozilla/plugins
+	--with-plugin-install-dir=%{_libdir}/mozilla/plugins \
+	--disable-schemas-install
 
 %{__make}
 
@@ -57,6 +53,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
+	
 
 %clean
 rm -rf $RPM_BUILD_ROOT
