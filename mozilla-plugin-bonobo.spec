@@ -4,7 +4,7 @@ Summary:	Browser Bonobo plugin
 Summary(pl):	Wtyczka Bonobo dla przegl±darek
 Name:		mozilla-plugin-bonobo
 Version:	0.4.1
-Release:	2
+Release:	2.9
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://savannah.nongnu.org/download/moz-bonobo/%{_origname}-%{version}.tar.gz
@@ -13,7 +13,7 @@ URL:		http://www.nongnu.org/moz-bonobo/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
+BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libtool
 BuildRequires:	mozilla-embedded-devel
 Requires(post):	GConf2
