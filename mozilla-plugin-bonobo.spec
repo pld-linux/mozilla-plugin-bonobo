@@ -1,3 +1,4 @@
+# TODO: rename spec to mozilla-plugin-bonobo.spec
 %define		_origname mozilla-bonobo
 
 Summary:	Browser Bonobo plugin
@@ -40,7 +41,6 @@ do wy¶wietlania wspieranych typów plików w oknie przegl±darki.
 %setup -q -n %{_origname}-%{version}
 
 %build
-rm -f missing
 %configure \
 	--with-plugin-install-dir=%{_libdir}/mozilla/plugins \
 	--disable-schemas-install
@@ -53,7 +53,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
-	
 
 %clean
 rm -rf $RPM_BUILD_ROOT
