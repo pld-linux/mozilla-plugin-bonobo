@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libtool
-BuildRequires:	mozilla-embedded-devel
+BuildRequires:	mozilla-devel
 Requires(post):	GConf2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
