@@ -2,7 +2,7 @@ Summary:	Browser Bonobo plugin
 Summary(pl):	Wtyczka Bonobo dla przegl±darek
 Name:		mozilla-bonobo
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://savannah.nongnu.org/download/moz-bonobo/%{name}-%{version}.tar.gz
@@ -12,7 +12,7 @@ URL:		http://www.nongnu.org/moz-bonobo/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	libgnomeui-devel >= 2.0.0
+BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 BuildRequires:	libtool
 BuildRequires:	mozilla-embedded-devel
 Requires(post):	GConf2
@@ -55,7 +55,8 @@ rm -f missing
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
