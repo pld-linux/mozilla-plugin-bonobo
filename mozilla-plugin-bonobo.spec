@@ -1,7 +1,7 @@
 %define		_origname mozilla-bonobo
 
 Summary:	Browser Bonobo plugin
-Summary(pl):	Wtyczka Bonobo dla przegl±darek
+Summary(pl.UTF-8):   Wtyczka Bonobo dla przeglÄ…darek
 Name:		mozilla-plugin-bonobo
 Version:	0.4.2.1
 Release:	1
@@ -27,14 +27,14 @@ Netscape 4 plugin API, and it should work on many different browsers.
 In short: this plugin makes your browser use Bonobo controls to
 display supported file types inside the browser window or frame.
 
-%description -l pl
-Mozilla-bonobo jest wtyczk± dla przegl±darek. £±czy ona przegl±darkê z
-Bonobo, technologi± komponentów GNOME. Wtyczka próbuje wspieraæ API
-wtyczek Netscape 4 ale powinna dzia³aæ te¿ z wieloma innymi
-przegl±darkami.
+%description -l pl.UTF-8
+Mozilla-bonobo jest wtyczkÄ… dla przeglÄ…darek. ÅÄ…czy ona przeglÄ…darkÄ™ z
+Bonobo, technologiÄ… komponentÃ³w GNOME. Wtyczka prÃ³buje wspieraÄ‡ API
+wtyczek Netscape 4 ale powinna dziaÅ‚aÄ‡ teÅ¼ z wieloma innymi
+przeglÄ…darkami.
 
-W skrócie: wtyczka ta sprawia, ¿e przegl±darka u¿ywa kontrolek Bonobo
-do wy¶wietlania wspieranych typów plików w oknie przegl±darki.
+W skrÃ³cie: wtyczka ta sprawia, Å¼e przeglÄ…darka uÅ¼ywa kontrolek Bonobo
+do wyÅ›wietlania wspieranych typÃ³w plikÃ³w w oknie przeglÄ…darki.
 
 %prep
 %setup -q -n %{_origname}-%{version}
