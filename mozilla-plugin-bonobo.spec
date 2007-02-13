@@ -1,7 +1,7 @@
 %define		_origname mozilla-bonobo
 
 Summary:	Browser Bonobo plugin
-Summary(pl.UTF-8):   Wtyczka Bonobo dla przeglądarek
+Summary(pl.UTF-8):	Wtyczka Bonobo dla przeglądarek
 Name:		mozilla-plugin-bonobo
 Version:	0.4.2.1
 Release:	1
