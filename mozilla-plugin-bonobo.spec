@@ -12,7 +12,7 @@ Source0:	http://savannah.nongnu.org/download/moz-bonobo/%{_origname}-%{version}.
 URL:		http://www.nongnu.org/moz-bonobo/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libtool
 BuildRequires:	mozilla-devel
